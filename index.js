@@ -17,10 +17,10 @@ const db = mysql.createConnection({
 
 db.connect(err => {
   if (err) {
-    console.error('❌ MySQL connection error:', err);
+    console.error('MySQL connection error:', err);
     process.exit(1);
   }
-  console.log('✅ Connected to MySQL');
+  console.log('Connected to MySQL');
 });
 
 // REGISTER endpoint
@@ -56,5 +56,5 @@ app.post('/login', (req, res) => {
 // Start server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`🚀 Server listening on http://localhost:${port}`);
+  console.log(`Server listening on http://localhost:${port}`);
 });
